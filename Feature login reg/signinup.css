@@ -290,6 +290,33 @@ input[type=submit]:hover {
     opacity: 1;
 }
 
+/* Alert messages */
+.alert {
+    padding: 13px;
+    background-color: #ffe1df;
+    color: rgb(219, 103, 88);
+    border-radius: 4px;
+    border: 1px solid #ffa9a3;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+  
+.closebtn {
+    margin-left: 15px;
+    color: rgb(190, 190, 190);
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.closebtn:hover {
+    color: rgb(136, 135, 135);
+}
+
 /*Responsive web page*/
 @media only screen and (max-width: 1185px){
     .loginContainer {
