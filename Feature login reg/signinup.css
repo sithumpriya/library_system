@@ -134,3 +134,22 @@ form .text_field {
     opacity: 1;
     right: 0;
 }
+
+/*Login form signup button and text*/
+.buttonSignUp {
+    border: none;
+    color: rgb(85, 168, 252);
+    background-color: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+}
+  
+.buttonSignUp:hover {text-decoration-line: underline;}
+  
+.signUpText {
+    text-align: center;
+    padding-bottom: 40px;
+    color: #555;
+}
