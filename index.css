@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1D2A35;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+* {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navigation bar */
+.navbar {
+    width: 100%;
+    background: linear-gradient(120deg,rgb(23, 29, 73), rgb(22, 34, 58));
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+    padding: 10px 0;
+    opacity: 0.9;
+}
+
+.navbar span {
+    font-size: 30px;
+    font-weight: 700;
+    color: #f1f1f1;
+    height: 100%;
+    margin-left: 7%;
+}
