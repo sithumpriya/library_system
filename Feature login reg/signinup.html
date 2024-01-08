@@ -63,6 +63,65 @@
                 <!-- Title for sign up container -->
                 <h2 style="text-align: center; margin: 12px 0 24px 0; position: relative; color:#f5f5f5;">Sign Up</h2>
                 <hr style="border: 1px solid silver; margin-bottom: 12px;">
+
+                <!-- Input field for sign up -->
+                <div class="row">
+                    <div class="col-25">
+                        <label for="firstName">First Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" class="inputField" id="firstName" name="firstName" placeholder="enter first name" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lastName">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" class="inputField" id="lastName" name="lastName" placeholder="enter last name" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="userId">User Id</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" class="inputField" id="userId" name="userId" pattern="U[0-9]{3}" placeholder="UXXX" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" class="inputField" id="username" name="username" placeholder="enter username" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" class="inputField" id="email" name="email" placeholder="enter email address" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="password" class="inputField" id="password" name="password" pattern="[0-9]{8,}" title="Must contain at least 8 digits or more" placeholder="8 digits or more" required>
+                    </div>
+                </div>
+                <!-- Sign up button -->
+                <div class="row">
+                    <input type="submit" value="Sign Up" name="signup">                    
+                </div>
             </div>
         </form>
     </div>

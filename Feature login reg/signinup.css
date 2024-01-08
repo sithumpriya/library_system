@@ -217,3 +217,75 @@ form .text_field {
     from {transform: scale(0)} 
     to {transform: scale(1)}
 }
+
+/* The sign up modal input field */
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+  
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.inputField {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #8f8f8f;
+    border-radius: 4px;
+    resize: vertical;
+    background-color: #1f2b31;
+}
+  
+.inputField:focus {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border: 2px solid rgb(1, 123, 175);
+    outline: none;
+    background-color: rgba(128, 217, 255, 0.1);
+}
+  
+.inputField:hover {
+    border: 2px solid rgb(1, 123, 175);
+}
+
+.container .row input {
+  color: #e4e4e4;
+}
+
+/* The sign up modal input field label */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: bold;
+  color: #acacac;
+}
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The sign up modal submit button */
+input[type=submit] {
+    background-color: rgb(1, 123, 175);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.8;
+    width: 100%;
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 600;
+}
+  
+input[type=submit]:hover {
+    opacity: 1;
+}
