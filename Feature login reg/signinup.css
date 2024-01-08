@@ -290,7 +290,7 @@ input[type=submit]:hover {
     opacity: 1;
 }
 
-/* Alert messages */
+/* Alert messages warning */
 .alert {
     padding: 13px;
     background-color: #ffe1df;
@@ -316,6 +316,19 @@ input[type=submit]:hover {
 .closebtn:hover {
     color: rgb(136, 135, 135);
 }
+
+/* Alert messages success */
+.alertSuccess {
+    padding: 13px;
+    background-color: #dfffe9;
+    color: rgb(58, 160, 58);
+    border-radius: 4px;
+    border: 1px solid #b5ffa3;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  
 
 /*Responsive web page*/
 @media only screen and (max-width: 1185px){

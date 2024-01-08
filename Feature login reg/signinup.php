@@ -1,3 +1,24 @@
+<?php
+require '../config.php';
+
+// unset alert messages
+if (!empty($_SESSION['lastDuplicateTime'])) {
+    if((time() - $_SESSION['lastDuplicateTime']) > 5) {
+        unset($_SESSION['lastDuplicateTime']);
+    }
+}
+if (!empty($_SESSION['lastSuccessTime'])) {
+    if((time() - $_SESSION['lastSuccessTime']) > 5) {
+        unset($_SESSION['lastSuccessTime']);
+    }
+}
+if (!empty($_SESSION['lastEmailInvalidTime'])) {
+    if((time() - $_SESSION['lastEmailInvalidTime']) > 5) {
+        unset($_SESSION['lastEmailInvalidTime']);
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +34,31 @@
 </head>
 
 <body>
+    <!-- Alert messages -->
+    <?php
+    if (!empty($_SESSION["lastDuplicateTime"])) { ?>
+        <div class="alert"style="margin: 10px 8% 0px 8%;">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            The entered details are already in use.
+        </div>
+    <?php
+    }
+    if (!empty($_SESSION["lastSuccessTime"])) { ?>
+        <div class="alertSuccess" style="margin: 10px 8% 0px 8%;">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            Registration has been completed successfully.
+        </div>
+    <?php
+    }
+    if (!empty($_SESSION["lastEmailInvalidTime"])) { ?>
+        <div class="alert" style="margin: 10px 8% 0px 8%;">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            The email provided is invalid.
+        </div>
+    <?php
+    }
+    ?>
+
     <!-- Welcome text -->
     <div class="welcomeText">
         <p class="text1">Welcome to the Library System</p>
@@ -53,7 +99,7 @@
     <!-- Sign up form modal -->
     <div id="id01" class="modal">
   
-        <form class="modal-content animate" action="" method="post" autocomplete="off">
+        <form class="modal-content animate" action="signInUpAction.php" method="post" autocomplete="off">
             <!-- Modal close button -->
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close">&times;</span>
