@@ -25,5 +25,17 @@ if(empty($_SESSION["user_id"])){
         <span style="cursor: pointer;" onclick="window.location.href='index.php'">Library System</span>
         <a href="logout.php">Log out</a>
     </div>
+
+    <!-- Features gallery -->
+    <div class="responsive">
+        
+        <div class="feature">
+            <a href="">
+                <img src="Resource/1.jpg" alt="Library staff">
+                <div class="desc">Library staff</div>
+            </a>           
+        </div>
+
+    </div>
 </body>
 </html>

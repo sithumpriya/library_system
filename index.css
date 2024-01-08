@@ -49,3 +49,45 @@ html{
 .navbar a:hover {
     text-decoration: underline;
 }
+
+/* Features gallery */
+.responsive {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 70px 70px 20px 70px;
+}
+
+div.feature {
+
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2.5px 5px 0 rgba(0, 0, 0, 0.19);
+    width: 320px;
+    height: 230px;
+    object-fit: cover;
+    margin: 18px;
+    background-color: #575757;
+}
+  
+div.feature:hover {
+    -ms-transform: scale(3.7);
+    -webkit-transform: scale(3.7);
+    transform: scale(1.1); 
+}
+  
+div.feature img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+div.feature a {
+    text-decoration: none;
+}
+
+div.desc {
+    padding: 11px;
+    text-align: center;
+    color: #cfcfcf;
+    font-weight: 600;
+}
