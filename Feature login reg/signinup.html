@@ -45,8 +45,37 @@
         </form>
         <!-- Sign up form modal popup button -->
         <div class="signUpText">  
-            <span style="color: #999;">Don't have an account?<span><br><button class="buttonSignUp" style="width:auto;">Sign up now</button>
+            <span style="color: #999;">Don't have an account?<span><br><button class="buttonSignUp" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign up now</button>
         </div>
     </div>
+
+
+    <!-- Sign up form modal -->
+    <div id="id01" class="modal">
+  
+        <form class="modal-content animate" action="" method="post" autocomplete="off">
+            <!-- Modal close button -->
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close">&times;</span>
+            </div>
+        
+            <div class="container">
+                <!-- Title for sign up container -->
+                <h2 style="text-align: center; margin: 12px 0 24px 0; position: relative; color:#f5f5f5;">Sign Up</h2>
+                <hr style="border: 1px solid silver; margin-bottom: 12px;">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal1 = document.getElementById('id01');
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
