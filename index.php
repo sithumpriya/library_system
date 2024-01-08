@@ -23,6 +23,7 @@ if(empty($_SESSION["user_id"])){
     <!-- Navigation bar -->
     <div class="navbar">
         <span style="cursor: pointer;" onclick="window.location.href='index.php'">Library System</span>
+        <a href="logout.php">Log out</a>
     </div>
 </body>
 </html>
