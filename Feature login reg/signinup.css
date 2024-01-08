@@ -92,3 +92,45 @@ form .text_field {
 .text_field input:valid ~ span::before {
     width: 100%;
 }  
+
+/*Login button*/
+.buttonLogin {
+    display: inline-block;
+    border-radius: 25px;
+    background-color: rgb(1, 123, 175);
+    border: none;
+    width: 100%;
+    height: 40px;
+    color: white;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    opacity: 0.9;
+}
+  
+.buttonLogin span {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.buttonLogin span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.buttonLogin:hover span {
+    padding-right: 25px;
+}
+  
+.buttonLogin:hover span:after {
+    opacity: 1;
+    right: 0;
+}
