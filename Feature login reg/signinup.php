@@ -1,6 +1,11 @@
 <?php
 require '../config.php';
 
+// Verifies user login authenticity
+if(!empty($_SESSION["user_id"])){
+    header('Location: ../index.php');
+}
+
 // unset alert messages
 if (!empty($_SESSION['lastDuplicateTime'])) {
     if((time() - $_SESSION['lastDuplicateTime']) > 5) {
@@ -15,6 +20,11 @@ if (!empty($_SESSION['lastSuccessTime'])) {
 if (!empty($_SESSION['lastEmailInvalidTime'])) {
     if((time() - $_SESSION['lastEmailInvalidTime']) > 5) {
         unset($_SESSION['lastEmailInvalidTime']);
+    }
+}
+if (!empty($_SESSION['lastInvalidLoginTime'])) {
+    if((time() - $_SESSION['lastInvalidLoginTime']) > 5) {
+        unset($_SESSION['lastInvalidLoginTime']);
     }
 }
 ?>
@@ -70,7 +80,18 @@ if (!empty($_SESSION['lastEmailInvalidTime'])) {
 
         <!-- title for login container -->
         <h1 style="color: #f5f5f5;">Log in</h1>
-        <form action="" method="post" autocomplete="off">
+        <form action="signInUpAction.php" method="post" autocomplete="off">
+
+            <!-- Alert messages for invalid login -->
+            <?php
+            if (!empty($_SESSION["lastInvalidLoginTime"])) { ?>
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                    Invalid login, please try again.
+                </div>
+            <?php
+            }
+            ?>
 
             <!-- Input field for username -->
             <div class="text_field">

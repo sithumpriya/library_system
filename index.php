@@ -1,3 +1,12 @@
+<?php
+require 'config.php';
+
+// Verifies user login authenticity
+if(empty($_SESSION["user_id"])){
+    header("Location: Feature login reg/signinup.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
