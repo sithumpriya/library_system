@@ -67,6 +67,7 @@
                 <!-- Alert messages -->
                 <div id="txt2"></div>
                 <div id="txt3"></div>
+                <div id="txt4"></div>
 
                 <!-- Input field for sign up -->
                 <div class="row">
@@ -110,7 +111,7 @@
                         <label for="email">Email</label>
                     </div>
                     <div class="col-75">
-                        <input type="email" class="inputField" id="email" name="email" placeholder="enter email address" required>
+                        <input type="email" class="inputField" id="email" name="email" onchange="checkEmail(this.value)" placeholder="enter email address" required>
                     </div>
                 </div>
 
@@ -157,6 +158,16 @@
                 document.getElementById("txt3").innerHTML = this.responseText;
             }
             xhttp.open("GET", "checksUsername.php?username="+str);
+            xhttp.send();
+        }
+
+        // Checks entered email with existing registered emails
+        function checkEmail(str) {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("txt4").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "checksEmail.php?email="+str);
             xhttp.send();
         }
     </script>
