@@ -289,3 +289,58 @@ input[type=submit] {
 input[type=submit]:hover {
     opacity: 1;
 }
+
+/*Responsive web page*/
+@media only screen and (max-width: 1185px){
+    .loginContainer {
+        left: 55%;
+        width: 33%;
+    }
+    .welcomeText .text1 {
+        font-size: 38px;
+        font-weight: 600;
+    }
+    .welcomeText .text2 {
+        font-size: 17px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .loginContainer {
+        width: 40%;
+        left: 48%;
+    }
+}
+@media only screen and (max-width: 750px){
+    .loginContainer {
+        position: relative;
+        top: 0;
+        width: 60%;
+        left: 20%;
+    }
+    .welcomeText {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        padding-top: 1%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .loginContainer {
+        width: 80%;
+        left: 10%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .modal-content {
+        width: 86%;
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-top: 10%;
+    }
+    .col-25 {
+        width: 35%;
+    }
+    .col-75 {
+        width: 65%;
+    }
+}
