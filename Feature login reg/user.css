@@ -50,3 +50,71 @@ html{
 .navbar a:hover {
     text-decoration: underline;
 }
+
+/* Section my_profile */
+.container {
+    border-radius: 5px;
+    background-color: #a8a8a8;
+    padding: 20px 10% 25px 10%;
+}
+  
+.col-25 {
+    float: left;
+    width: 40%;
+    margin-top: 6px;
+}
+  
+.col-75 {
+    float:left;
+    width: 60%;
+    margin-top: 6px;
+}
+
+.userProfile {
+    display: block;
+    width: 100%;
+    padding: 65px 120px 10px 120px;
+}
+
+.userProfile .title {
+    width: 100%;
+    color: #e0e0e0;
+    font-size: 20px;
+    font-weight: 500;
+    border-top: 1px solid #818181;
+    border-bottom: 1px solid #818181;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+input[type=text], input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #929292;
+    border-radius: 4px;
+    resize: vertical;
+    background-color: #e0e0e0;
+}
+
+input[type=text]:hover, input[type=email]:hover, input[type=password]:hover {
+    background-color: #eeecec;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+    outline: none;
+    background-color: #f6f6f6;
+}
+  
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-weight: 600;
+    color: #424242;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
