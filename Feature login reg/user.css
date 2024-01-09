@@ -241,3 +241,35 @@ tr:nth-child(even) {
     background-color: #9c9c9c;
     color: #111111;
 }
+
+/* Responsive web page */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit], input[type=reset] {
+        width: 100%;
+        margin-top: 0;
+    }
+    input[type=submit] {
+        margin-top: 20px;
+    }
+    input[type=reset] {
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .userProfile {
+        padding: 70px 80px 20px 80px;
+    }
+
+    .userRecords {
+        padding: 0px 80px 20px 80px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .userProfile {
+        padding: 70px 60px 20px 60px;
+    }
+
+    .userRecords {
+        padding: 0px 60px 20px 60px;
+    }
+}
