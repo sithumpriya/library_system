@@ -40,7 +40,7 @@ if(empty($_SESSION["user_id"])){
 
         <!-- User details for update -->
         <div class="container">
-            <form action="" method="post" autocomplete="off">
+            <form action="" method="post" name="myProfile" autocomplete="off">
                 <div class="row">
                     <div class="col-25">
                         <label for="firstName">First Name</label>
@@ -86,7 +86,7 @@ if(empty($_SESSION["user_id"])){
                         <label for="password">Password</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="password" name="password" value="<?php echo $row["password"]; ?>" onclick="this.value=''" onfocus="funDisplay()" placeholder="Set a new password..(optional)">
+                        <input type="text" id="password" name="password" value="<?php echo $row["password"]; ?>" onclick="this.value=''" onfocus="funDisplay()" onchange="validatePassword()" placeholder="Set a new password..(optional)">
                     </div>
                 </div>
                 <!-- Buttons for save and cancel the changes -->
@@ -107,6 +107,15 @@ if(empty($_SESSION["user_id"])){
         // When the user clicks cancel button hide save and cancel buttons
         function funHide() {
             document.getElementById("button").style.display = "none";
+        }
+
+        // Validate new password
+        function validatePassword() {
+            let x = document.forms["myProfile"]["password"].value;
+            if (x.length < 8 || isNaN(x)) {
+                alert("Must contain at least 8 digits or more");
+                return false;
+            }
         }
     </script>
 </body>
