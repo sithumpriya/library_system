@@ -1,0 +1,386 @@
+* {
+    box-sizing: border-box;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../Resource/background_image.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Welcome text */
+.welcomeText {
+    width: 50%;
+    color: #f5f5f5;
+    padding-top: 5%;
+    padding-left: 8%;
+    padding-bottom: 8%;
+}
+.welcomeText .text1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+.welcomeText .text2 {
+  font-size: 20px;
+}
+
+/* Login form modal */
+.loginContainer {
+    position: absolute;
+    top: 15%;
+    left: 62%;
+    width: 30%;
+    background: #1D2A35;
+    border-radius: 10px;
+    overflow: auto;
+    box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.6), 0 12px 36px 0 rgba(0, 0, 0, 0.3);
+}
+.loginContainer h1 {
+    text-align: center;
+    padding: 10px 0 27px 0;
+    border-bottom: 1px solid silver;
+}
+.loginContainer form {
+    padding: 0 40px 23px 40px;
+    box-sizing: border-box; 
+}
+form .text_field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.text_field input {
+    width: 100%;
+    padding: 0 15px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: #f0f0f0;
+}
+.text_field label {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.text_field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+}
+.text_field input:focus ~ label,
+.text_field input:valid ~ label {
+    top: -5px;
+    color: #2691d9;
+}
+.text_field input:focus ~ span::before,
+.text_field input:valid ~ span::before {
+    width: 100%;
+}  
+
+/*Login button*/
+.buttonLogin {
+    display: inline-block;
+    border-radius: 25px;
+    background-color: rgb(1, 123, 175);
+    border: none;
+    width: 100%;
+    height: 40px;
+    color: white;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    opacity: 0.9;
+}
+  
+.buttonLogin span {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.buttonLogin span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.buttonLogin:hover span {
+    padding-right: 25px;
+}
+  
+.buttonLogin:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/*Login form signup button and text*/
+.buttonSignUp {
+    border: none;
+    color: rgb(85, 168, 252);
+    background-color: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+}
+  
+.buttonSignUp:hover {text-decoration-line: underline;}
+  
+.signUpText {
+    text-align: center;
+    padding-bottom: 40px;
+    color: #555;
+}
+
+/* The sign up modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+  
+/* Modal content */
+.modal-content {
+    background-color: #1D2A35;
+    margin: 5% auto;
+    width: 450px;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 9px 30px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container {
+  padding: 16px;
+}
+
+/* position the close button */
+.imgcontainer {
+    position: relative;
+}
+  
+/* The close button (x) */
+.close {
+    position: absolute;
+    right: 16px;
+    top: 0;
+    color: #a0a0a0;
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: rgb(105, 105, 105);
+    cursor: pointer;
+}
+  
+/* Add zoom animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+  
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* The sign up modal input field */
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+  
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.inputField {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #8f8f8f;
+    border-radius: 4px;
+    resize: vertical;
+    background-color: #1f2b31;
+}
+  
+.inputField:focus {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border: 2px solid rgb(1, 123, 175);
+    outline: none;
+    background-color: rgba(128, 217, 255, 0.1);
+}
+  
+.inputField:hover {
+    border: 2px solid rgb(1, 123, 175);
+}
+
+.container .row input {
+  color: #e4e4e4;
+}
+
+/* The sign up modal input field label */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: bold;
+  color: #acacac;
+}
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The sign up modal submit button */
+input[type=submit] {
+    background-color: rgb(1, 123, 175);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.8;
+    width: 100%;
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 600;
+}
+  
+input[type=submit]:hover {
+    opacity: 1;
+}
+
+/* Alert messages warning */
+.alert {
+    padding: 13px;
+    background-color: #ffe1df;
+    color: rgb(219, 103, 88);
+    border-radius: 4px;
+    border: 1px solid #ffa9a3;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+  
+.closebtn {
+    margin-left: 15px;
+    color: rgb(190, 190, 190);
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.closebtn:hover {
+    color: rgb(136, 135, 135);
+}
+
+/* Alert messages success */
+.alertSuccess {
+    padding: 13px;
+    background-color: #dfffe9;
+    color: rgb(58, 160, 58);
+    border-radius: 4px;
+    border: 1px solid #b5ffa3;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  
+
+/*Responsive web page*/
+@media only screen and (max-width: 1185px){
+    .loginContainer {
+        left: 55%;
+        width: 33%;
+    }
+    .welcomeText .text1 {
+        font-size: 38px;
+        font-weight: 600;
+    }
+    .welcomeText .text2 {
+        font-size: 17px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .loginContainer {
+        width: 40%;
+        left: 48%;
+    }
+}
+@media only screen and (max-width: 750px){
+    .loginContainer {
+        position: relative;
+        top: 0;
+        width: 60%;
+        left: 20%;
+    }
+    .welcomeText {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        padding-top: 1%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .loginContainer {
+        width: 80%;
+        left: 10%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .modal-content {
+        width: 86%;
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-top: 10%;
+    }
+    .col-25 {
+        width: 35%;
+    }
+    .col-75 {
+        width: 65%;
+    }
+}
