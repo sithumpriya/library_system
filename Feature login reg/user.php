@@ -12,6 +12,23 @@ if(empty($_SESSION["user_id"])){
     $userResult = "SELECT * FROM user";
     $userRows = $conn->query($userResult);
 }
+
+// unset alert messages
+if (!empty($_SESSION['lastSuccessUpdateTime'])) {
+    if((time() - $_SESSION['lastSuccessUpdateTime']) > 5) {
+        unset($_SESSION['lastSuccessUpdateTime']);
+    }
+}
+if (!empty($_SESSION['lastExistUpdateTime'])) {
+    if((time() - $_SESSION['lastExistUpdateTime']) > 5) {
+        unset($_SESSION['lastExistUpdateTime']);
+    }
+}
+if (!empty($_SESSION['lastInvalidEmailTime'])) {
+    if((time() - $_SESSION['lastInvalidEmailTime']) > 5) {
+        unset($_SESSION['lastInvalidEmailTime']);
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -38,9 +55,34 @@ if(empty($_SESSION["user_id"])){
     <div class="userProfile">
         <div class="title">My Profile</div>
 
+        <!-- Alert messages -->
+        <?php
+        if (!empty($_SESSION["lastExistUpdateTime"])) { ?>
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                The entered details are already in use.
+            </div>
+        <?php
+        }
+        if (!empty($_SESSION["lastInvalidEmailTime"])) { ?>
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                The email provided is invalid.
+            </div>
+        <?php
+        }
+        if (!empty($_SESSION["lastSuccessUpdateTime"])) { ?>
+            <div class="alertSuccess">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                The update has been completed successfully.
+            </div>
+        <?php
+        }
+        ?>
+
         <!-- User details for update -->
         <div class="container">
-            <form action="" method="post" name="myProfile" autocomplete="off">
+            <form action="userAction.php" method="post" name="myProfile" autocomplete="off">
                 <div class="row">
                     <div class="col-25">
                         <label for="firstName">First Name</label>
