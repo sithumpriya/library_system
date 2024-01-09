@@ -31,8 +31,43 @@ if(empty($_SESSION["user_id"])){
         
         <div class="feature">
             <a href="Feature login reg/user.php">
-                <img src="Resource/1.jpg" alt="Library staff">
-                <div class="desc">Library staff</div>
+                <img src="Resource/1.jpg" alt="LIBRARY STAFF">
+                <div class="desc">LIBRARY STAFF</div>
+            </a>           
+        </div>
+
+        <div class="feature">
+            <a href="">
+                <img src="Resource/2.jpg" alt="BOOKS">
+                <div class="desc">BOOKS</div>
+            </a>           
+        </div>
+
+        <div class="feature">
+            <a href="">
+                <img src="Resource/3.jpg" alt="BOOK CATEGORY">
+                <div class="desc">BOOK CATEGORY</div>
+            </a>           
+        </div>
+
+        <div class="feature">
+            <a href="">
+                <img src="Resource/4.jpg" alt="LIBRARY MEMBERS">
+                <div class="desc">LIBRARY MEMBERS</div>
+            </a>           
+        </div>
+
+        <div class="feature">
+            <a href="">
+                <img src="Resource/5.jpg" alt="BOOKS BORROW">
+                <div class="desc">BOOK BORROW</div>
+            </a>           
+        </div>
+
+        <div class="feature">
+            <a href="">
+                <img src="Resource/6.jpg" alt="FINES">
+                <div class="desc">FINES</div>
             </a>           
         </div>
 
