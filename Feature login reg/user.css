@@ -195,3 +195,49 @@ input[type=reset]:hover {
     font-size: 14px;
     margin-bottom: 6px;
 }
+
+/* User records */
+.userRecords {
+    display: block;
+    width: 100%;
+    padding: 0px 120px 20px 120px;
+}
+
+.userRecords .title {
+    width: 100%;
+    color: #e0e0e0;
+    font-size: 20px;
+    font-weight: 500;
+    border-top: 1px solid #818181;
+    border-bottom: 1px solid #818181;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: none
+}
+
+th {
+    color: rgb(190, 190, 190);
+}
+  
+th, td {
+    text-align: left;
+    padding: 8px;
+    padding-left: 12px;
+    min-width: 105px;
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgb(209, 209, 209);
+}
+
+tr:nth-child(even) {
+    background-color: #9c9c9c;
+    color: #111111;
+}

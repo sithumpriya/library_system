@@ -140,6 +140,38 @@ if (!empty($_SESSION['lastInvalidEmailTime'])) {
         </div>
     </div>
 
+    <!-- Section user records -->
+    <div class="userRecords">
+        <div class="title">User Records</div>
+        
+        <div style="overflow-x:auto;">
+            <table>
+                <tr style="background: none;">
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>User Id</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                </tr>
+                <?php
+                    while($userRow = mysqli_fetch_assoc($userRows)){
+                ?>
+                        <tr>
+                            <td><?php echo $userRow["first_name"]; ?></td>
+                            <td><?php echo $userRow["last_name"]; ?></td>
+                            <td><?php echo $userRow["user_id"]; ?></td>
+                            <td><?php echo $userRow["username"]; ?></td>
+                            <td><?php echo $userRow["email"]; ?></td>
+                            <td><?php echo $userRow["password"]; ?></td>
+                        </tr>
+                <?php
+                    }
+                ?>
+            </table>
+        </div>
+    </div>
+
     <script>
         // When the user onkeydown display save and cancel buttons
         function funDisplay() {
