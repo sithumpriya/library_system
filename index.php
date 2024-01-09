@@ -30,7 +30,7 @@ if(empty($_SESSION["user_id"])){
     <div class="responsive">
         
         <div class="feature">
-            <a href="">
+            <a href="Feature login reg/user.php">
                 <img src="Resource/1.jpg" alt="Library staff">
                 <div class="desc">Library staff</div>
             </a>           
