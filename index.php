@@ -51,7 +51,7 @@ if(empty($_SESSION["user_id"])){
         </div>
 
         <div class="feature">
-            <a href="">
+            <a href="Feature member/member.php">
                 <img src="Resource/4.jpg" alt="LIBRARY MEMBERS">
                 <div class="desc">LIBRARY MEMBERS</div>
             </a>           
