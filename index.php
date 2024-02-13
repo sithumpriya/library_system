@@ -44,7 +44,7 @@ if(empty($_SESSION["user_id"])){
         </div>
 
         <div class="feature">
-            <a href="">
+            <a href="Feature category reg/category.php">
                 <img src="Resource/3.jpg" alt="BOOK CATEGORY">
                 <div class="desc">BOOK CATEGORY</div>
             </a>           
