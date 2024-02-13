@@ -1,0 +1,49 @@
+.userRecords td button.edit{
+    background: #047741;
+    padding: 6px 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.userRecords td button.edit:hover{
+    background: #04683a;
+}
+
+.userRecords td button.delete:hover{
+    background: #bd0e0e;
+}
+
+.userRecords td button.delete{
+    background: #e11111;
+    padding: 6px 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.userRecords td button a{
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.userRecords td button a i{
+    font-size: 14px;
+    padding-right: 3px;
+    position: relative;
+    top: 2px;
+}
+
+select{
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #929292;
+    border-radius: 4px;
+    resize: vertical;
+    background-color: #e0e0e0;
+    resize: none;
+}
