@@ -199,44 +199,7 @@ if (!empty($_SESSION['lastInvalidLoginTime'])) {
     </div>
 
     <script>
-        // Get the modal
-        var modal1 = document.getElementById('id01');
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal1) {
-                modal1.style.display = "none";
-            }
-        }
-
-        // Checks entered user id with existing registered user id
-        function checkUserId(str) {
-            const xhttp = new XMLHttpRequest();
-            xhttp.onload = function() {
-                document.getElementById("txt2").innerHTML = this.responseText;
-            }
-            xhttp.open("GET", "checksUserId.php?userId="+str);
-            xhttp.send();
-        }
-
-        // Checks entered username with existing registered usernames
-        function checkUsername(str) {
-            const xhttp = new XMLHttpRequest();
-            xhttp.onload = function() {
-                document.getElementById("txt3").innerHTML = this.responseText;
-            }
-            xhttp.open("GET", "checksUsername.php?username="+str);
-            xhttp.send();
-        }
-
-        // Checks entered email with existing registered emails
-        function checkEmail(str) {
-            const xhttp = new XMLHttpRequest();
-            xhttp.onload = function() {
-                document.getElementById("txt4").innerHTML = this.responseText;
-            }
-            xhttp.open("GET", "checksEmail.php?email="+str);
-            xhttp.send();
-        }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
     </script>
 </body>
 </html>
