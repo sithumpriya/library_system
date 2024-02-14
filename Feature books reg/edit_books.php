@@ -47,8 +47,10 @@ require '../config.php';
             if(isset($_GET['bookID']))
             {
                 $bookID = mysqli_real_escape_string($conn, $_GET['bookID']);
-                $query = "SELECT * FROM book WHERE book_id='$bookID'";
+                $query = "SELECT * FROM book INNER JOIN bookcategory ON book.category_id = bookcategory.category_id WHERE book_id='$bookID'";
                 $query_run = mysqli_query($conn, $query);
+
+                
 
                 if (mysqli_num_rows($query_run) > 0) 
                 {
@@ -80,7 +82,8 @@ require '../config.php';
                                         <label for="category_id">Category Name</label>
                                     </div>
                                     <div class="col-75">
-                                    <input type="text" id="category_id" name="category_id" value="<?= $book["category_id"]; ?>"/>
+                                    <input type="hidden" id="category_id" name="category_id" value="<?= $book["category_id"]; ?>"/>
+                                    <input type="text" id="category_name" name="category_name" value="<?= $book["category_Name"]; ?>"/>
                                     </div>
                                 </div>
                                 

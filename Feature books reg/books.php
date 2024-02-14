@@ -111,7 +111,7 @@ if(empty($_SESSION["user_id"])){
                     <th>Action</th>
                 </tr> 
                 <?php
-                    $bookResult = "SELECT * FROM book";
+                    $bookResult = "SELECT * FROM book INNER JOIN bookcategory ON book.category_id = bookcategory.category_id";
                     $bookRows = $conn->query($bookResult);
 
                     while($bookRow = mysqli_fetch_assoc($bookRows)){
@@ -119,7 +119,7 @@ if(empty($_SESSION["user_id"])){
                         <tr>
                             <td><?php echo $bookRow["book_id"]; ?></td>
                             <td><?php echo $bookRow["book_name"]; ?></td>
-                            <td><?php echo $bookRow["category_id"]; ?></td>
+                            <td><?php echo $bookRow["category_Name"]; ?></td>
                             <td>
                                 <button class="edit"><a href="edit_books.php?bookID=<?= $bookRow["book_id"]; ?>"><i class='bx bxs-edit'></i>Edit</a></button>
                                 <form action="books_process.php" method="POST" style="display:inline;">
