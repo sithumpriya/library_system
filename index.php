@@ -65,7 +65,7 @@ if(empty($_SESSION["user_id"])){
         </div>
 
         <div class="feature">
-            <a href="">
+            <a href="Feature assign fine/fine.php">
                 <img src="Resource/6.jpg" alt="FINES">
                 <div class="desc">FINES</div>
             </a>           
